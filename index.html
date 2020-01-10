@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <h1><em>Daily Journal</em></h1>
+    <form>
+        <fieldset class="dataSet">
+            <label for="journalDate">Date of Entry: </label>
+            <input type="date" name="journalDate" id="journalDate">
+        </fieldset>
+        <fieldset class="dataSet">
+            <label for="text" >Concepts Covered: </label>
+            <input type="text" name="covered">
+        </fieldset>
+        <fieldset class="dataSet">
+            <textarea name="journalEntry" id="journalText" cols="30" rows="3"
+                placeholder="Please enter your entry here"></textarea>
+        </fieldset>
+        <fieldset class="dataSet">
+            <label for="moodOptions">Mood for the day: </label>
+            <select name="moodOptions" id="moodOptions">
+                <option value="pleaseSelect" disabled selected value>--Please select an option--</option>
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>
+                <option value="excited">excited</option>
+                <option value="frazzled">Frazzled</option>
+                <option value="anxious">Anxious</option>
+                <option value="daninc">It's Dancn' Time!!</option>
+            </select>
+        </fieldset>
+        <fieldset class="dataSet">
+            <button type="submit">This is how I feel!!</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>

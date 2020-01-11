@@ -25,6 +25,7 @@ form {
 header {
     display: flex;
     background-image: linear-gradient(to right, silver, rgb(16, 112, 171));
+    /* background-image: url("/src/img/droplets.jpeg"); */
     justify-content: center;
     
 }
@@ -35,6 +36,8 @@ div.formBtn {
 }
 h1.title {
     color: white;
+    text-shadow: 1px 1px black;
+    font-size: 300%;
 }
 
 div.formBG {

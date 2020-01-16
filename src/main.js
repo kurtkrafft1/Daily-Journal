@@ -26,6 +26,8 @@ const storeEntry = () => {
     }
     entryArray.unshift(newEntry);
 }
+
+
 const logEntry =() =>{
    
     for (let i=0; i<1;i++){
@@ -37,7 +39,18 @@ const logEntry =() =>{
     const entrySection = document.querySelector('.entrySection');
     // entrySection.innerHTML = html; 
     entrySection.insertAdjacentHTML('afterbegin', html);
+    console.log(entryArray[i].mood);
 
 
 }
 }
+// const logButton = document.querySelector('.btn-log')
+// logButton.addEventListener('click', function () {
+//     alert('Hello!')
+// });
+
+const logButton = document.querySelector('.btn-log');
+logButton.addEventListener('click',  logEntry);
+
+const formButton = document.querySelector('.btn-form');
+formButton.addEventListener("click", storeEntry);

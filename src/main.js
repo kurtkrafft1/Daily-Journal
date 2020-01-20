@@ -7,13 +7,19 @@ const krafftWord = 'KurtRules1'
 //     if (pWord == krafftWord){
 //         alert ("hey you got it buddy!");
         
-//     } else {
+//     } else { 
 //         alert("Sorry, try again mane")
 //         window.location.reload();
 //     }
 // }
+
+const mailingList = []
 const joiningKrew = () => {
-    alert ("Thanks for trying, unfortunately, this function isn't working yet :(")
+    let userEmail = document.querySelector('.userEmail').value;
+    mailingList.unshift(userEmail);
+    console.log(userEmail);
+    alert (`Thanks for subscribing ${mailingList[0]}`);
+
 }
 
 const entryArray = [];
@@ -37,11 +43,7 @@ const logEntry =() =>{
     <h5 class="entryItem">Mood: ${entryArray[i].mood}</h5>
     <h5 class="entryItem">Entry: ${entryArray[i].textarea}</h5></div></div>`
     const entrySection = document.querySelector('.entrySection');
-    // entrySection.innerHTML = html; 
     entrySection.insertAdjacentHTML('afterbegin', html);
-    console.log(entryArray[i].mood);
-
-
 }
 }
 // const logButton = document.querySelector('.btn-log')
@@ -54,3 +56,6 @@ logButton.addEventListener('click',  logEntry);
 
 const formButton = document.querySelector('.btn-form');
 formButton.addEventListener("click", storeEntry);
+
+const emailButton = document.querySelector('.emailBtn');
+emailButton.addEventListener('click', joiningKrew);

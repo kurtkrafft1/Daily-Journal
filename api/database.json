@@ -1,0 +1,25 @@
+{
+    "entries": [
+        {
+            "id": 1,
+            "date": "1/2/20",
+            "topic": "Javascript",
+            "textarea": "Today we covered a wide array (pun intended) of basic javascript functionality. We learned arrays, objects and functions. Nothing to crazy, but the basic buiding blocks for sucess",
+            "mood": "frazzled"
+        },
+        {
+            "id": 2,
+            "date": "1/3/20",
+            "topic": "CSS",
+            "textarea": "Today I learned styling! it was fanstastic and a lot of fun. flexbox changes the game and makes positioning easy!",
+            "mood": "anxious"
+        },
+        {
+            "id": 3,
+            "date": "1/4/20",
+            "topic": "HTML",
+            "textarea": "First day of class we learned setting up a basic HTML page, its awesome using the exclamation point to tab complete a skeleton.",
+            "mood": "Its dancin time"
+        }
+    ]
+}

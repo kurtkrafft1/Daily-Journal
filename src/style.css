@@ -20,13 +20,14 @@ form {
 }
 .dataSet {
     width: 75%;
-    margin-left: 1%;
 }
 header {
     display: flex;
     background-image: linear-gradient(to right, silver, rgb(16, 112, 171));
     /* background-image: url("/src/img/droplets.jpeg"); */
-    justify-content: center;
+    justify-content: space-evenly;
+    position: sticky;
+    top:0;
     
 }
 div.formBtn {
@@ -38,6 +39,36 @@ h1.title {
     color: white;
     text-shadow: 1px 1px black;
     font-size: 300%;
+}
+ul.navbar {
+    align-self: flex-end;
+    justify-content: space-around;
+    display: flex;
+    width: 50%;
+}
+li.navLink{
+    list-style-type: none;
+    border: 1px white solid;
+    border-radius: 5px;
+    padding: 10px;
+    transition: ease 0.3s;
+}
+li.navLink:hover{
+    border: 1px solid lightblue;
+    /* padding: 15px; */
+    transition: ease 0.3s;
+    background-color: midnightblue;
+}
+
+a.nav-link {
+    border: 1px white solid;
+    border: 2px;
+}
+a.nav-link:link{
+    color: white;
+}
+a.nav-link:visited{
+    color: white;
 }
 
 div.formBG {
@@ -81,12 +112,17 @@ button {
     color: white;
     background-color: rgb(16, 112, 171);
     transition: all .3s ease;
+    font-size: 1.4em;
 }
 button:hover {
     color: rgb(16, 112, 171);
     background-color: white;
     margin: 3%;
     transition: all .3 ease;
+}
+button.emailBtn {
+    font-size: 10px;
+    margin-left: 10px;
 }
 
 div.qoutebox {
@@ -106,4 +142,39 @@ div.iQoute p.qoute:first-letter {
     margin:3px;
     color: red;
     font-size: 130%;
+}
+
+.bodyTwo {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+div.transition {
+    border: 1px solid black;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+    background-color: rgba(43,43,43,0.8);
+    border-radius: 5%;
+}
+p.ampersand{
+    font-size: 50px;
+    color: white;
+}
+.entrySection {
+    margin-top: 2%;
+}
+.newEntries {
+    background-color: white;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.5%;
+    border-style: none;
+    border-radius: 2.5%;
+    margin-bottom: 5%;
 }

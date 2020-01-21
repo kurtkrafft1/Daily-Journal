@@ -13,6 +13,10 @@
 <body>
     <header>
         <h1 class="title"><em>Daily Journal</em></h1>
+        <ul class="navbar">
+            <li class="navLink"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="navLink"><a class="nav-link" href="logs.html">Logs</a></li>
+        </ul>
     </header>
     <form>
         <div class="formBG">
@@ -22,7 +26,7 @@
             </fieldset>
             <fieldset class="dataSet">
                 <label for="text">Concepts Covered:</label>
-                <input type="text" name="covered" minlength="2" maxlength="25" required>
+                <input type="text" class="topic" name="covered" minlength="2" maxlength="25" required>
             </fieldset>
             <fieldset class="dataSet">
                 <textarea name="journalEntry" id="journalText" cols="30" rows="3"
@@ -37,7 +41,7 @@
                     <option value="excited">excited</option>
                     <option value="frazzled">Frazzled</option>
                     <option value="anxious">Anxious</option>
-                    <option value="daninc">It's Dancn' Time!!</option>
+                    <option value="Its dancin' time!!">It's Dancn' Time!!</option>
                 </select>
             </fieldset>
             <fieldset class="dataSet">
@@ -49,7 +53,7 @@
 
             <fieldset class="dataSet">
                 <div class="formBtn">
-                    <button type="submit" onclick="return checkPassword();">This is how I feel!!</button>
+                    <button type="button" class='btn-form'>This is how I feel!!</button>
                 </div>
             </fieldset>
 
@@ -66,15 +70,26 @@
         </div>
     </form>
 </body>
+<!-- <div class="bodyTwo">
+    <div class="transition">
+        <p class="ampersand">&</p>
+        <button type="button" class="btn-log" >Log!! </button>
+    </div>
+    <div class="entrySection">
+
+    </div>
+</div> -->
 <footer class="footerBG">
     <h3><em>Thanks for listening!</em></h3>
     <br>
     <label for="email">Wanna Subscribe to the life of Kurt?</label>
     <div class="emailTag">
-        <input type="email" name="email" id="urEmail" placeholder="Enter your email here!">
-        <button class="emailBtn" type="submit" onclick="return joiningKrew()">Join The Kurt Krew</button>
+        <input type="email" name="email" id="urEmail" placeholder="Enter your email here!" class="userEmail">
+        <button class="emailBtn" type="button">Join The Kurt Krew</button>
     </div>
 </footer>
-<script src="/src/main.js"></script>
+<!-- <script src="/src/main.js"></script> -->
+<script src="/scripts.js"></script>
+
 
 </html>

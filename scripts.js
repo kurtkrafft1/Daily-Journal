@@ -42,6 +42,8 @@
 // }
 
 // logEntry();
+
+console.log('Prop-Tip; my api is on the localhost:8088 and only works on the Logs Page :/');
 const generateHTML = (journal) =>{
     let html = `<div class="newEntries"><div class='newEntry'>
     <h3>${journal.topic}</h3>
@@ -55,11 +57,12 @@ const generateHTML = (journal) =>{
 
 
 
-const entriesURL = "http://localhost:3000/entries";
+const entriesURL = "http://localhost:8088/entries";
 
 fetch(entriesURL)
     .then(resp=>resp.json())
     .then(entriesData =>{
+        // console.log(entriesData);
         entriesData.forEach(item=> {
             let itemEntry = generateHTML(item);
             const entrySection = document.querySelector('.entrySection');

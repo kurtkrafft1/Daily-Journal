@@ -1,11 +1,10 @@
-
+import API from './data.js';
+import DOMentries from './DOMentries.js';
 
 
 const logButton = document.querySelector('.btn-log');
-logButton.addEventListener('click', () =>{
+logButton.addEventListener('click', () => {
     API.postNewJournal(DOMentries.storeEntry());
 });
 
-const formButton = document.querySelector('.btn-form');
-formButton.addEventListener("click", DOMentries.storeEntry);
 

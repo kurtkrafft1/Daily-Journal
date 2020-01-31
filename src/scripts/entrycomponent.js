@@ -10,3 +10,5 @@ const newHtml = {
     return html;
 }
 }
+
+export default newHtml;

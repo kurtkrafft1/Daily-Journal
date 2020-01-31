@@ -11,91 +11,84 @@
 </head>
 
 <body>
-<div class="bigBody">
-    <header>
-        <h1 class="title"><em>Daily Journal</em></h1>
-        <ul class="navbar">
-            <li class="navLink"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="navLink"><a class="nav-link" href="logs.html">Logs</a></li>
-        </ul>
-    </header>
-    <form>
-        <div class="formBG">
-            <fieldset class="dataSet">
-                <label for="journalDate">Date of Entry: </label>
-                <input type="date" name="journalDate" id="journalDate" required>
-            </fieldset>
-            <fieldset class="dataSet">
-                <label for="text">Concepts Covered:</label>
-                <input type="text" class="topic" name="covered" minlength="2" maxlength="25" required>
-            </fieldset>
-            <fieldset class="dataSet">
-                <textarea name="journalEntry" id="journalText" cols="30" rows="3"
-                    placeholder="Please enter your entry here" minlength="10" maxlength="150"></textarea>
-            </fieldset>
-            <fieldset class="dataSet">
-                <label for="moodOptions">Mood for the day </label>
-                <select name="moodOptions" id="moodOptions" required>
-                    <option value="pleaseSelect" disabled selected value>--Please select an option--</option>
-                    <option value="happy">Happy</option>
-                    <option value="sad">Sad</option>
-                    <option value="excited">excited</option>
-                    <option value="frazzled">Frazzled</option>
-                    <option value="anxious">Anxious</option>
-                    <option value="Its dancin' time!!">It's Dancn' Time!!</option>
-                </select>
-            </fieldset>
-            <fieldset class="dataSet">
-                <label for="password">Password: </label>
-                <input type="password" name="password" id="pWord" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
-                    title="Please inclued at least 1 uppercase character, 1 lowercase character and 1 number. The password is 'KurtRules1'"
-                    minlength="6" required>
-            </fieldset>
+    <div class="bigBody">
+        <header>
+            <h1 class="title"><em>Daily Journal</em></h1>
+            <ul class="navbar">
+                <li class="navLink"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="navLink"><a class="nav-link" href="logs.html">Logs</a></li>
+            </ul>
+        </header>
+        <form>
+            <div class="formBG">
+                <fieldset class="dataSet">
+                    <label for="journalDate">Date of Entry: </label>
+                    <input type="date" name="journalDate" id="journalDate" required>
+                </fieldset>
+                <fieldset class="dataSet">
+                    <label for="text">Concepts Covered:</label>
+                    <input type="text" class="topic" name="covered" minlength="2" maxlength="25" required>
+                </fieldset>
+                <fieldset class="dataSet">
+                    <textarea name="journalEntry" id="journalText" cols="30" rows="3"
+                        placeholder="Please enter your entry here" minlength="10" maxlength="150"></textarea>
+                </fieldset>
+                <fieldset class="dataSet">
+                    <label for="moodOptions">Mood for the day </label>
+                    <select name="moodOptions" id="moodOptions" required>
+                        <option value="pleaseSelect" disabled selected value>--Please select an option--</option>
+                        <option value="happy">Happy</option>
+                        <option value="sad">Sad</option>
+                        <option value="excited">excited</option>
+                        <option value="frazzled">Frazzled</option>
+                        <option value="anxious">Anxious</option>
+                        <option value="Its dancin' time!!">It's Dancn' Time!!</option>
+                    </select>
+                </fieldset>
+                <fieldset class="dataSet">
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="pWord"
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                        title="Please inclued at least 1 uppercase character, 1 lowercase character and 1 number. The password is 'KurtRules1'"
+                        minlength="6" required>
+                </fieldset>
 
-            <fieldset class="dataSet">
-                <div class="formBtn">
-                    <button type="button" class='btn-form'>This is how I feel!!</button>
-                </div>
-            </fieldset>
-
-        </div>
-        <div class="qoutebox">
-            <div class="iQoute">
-                <p class="qoute">
-                    A purpose of human life, no matter who is controlling it, is to love whoever is around to be
-                    loved.
-                </p>
-                <br>
-                <p><strong>-Kurt Vonnegut <em>Sirens of Titan</em></strong></p>
             </div>
+            <div class="bodyTwo">
+                <div class="transition">
+                    <p class="ampersand">&</p>
+                    <button type="button" class="btn-log">Log!! </button>
+                </div>
+                <div class="entrySection">
+
+                </div>
+                <div class="qoutebox">
+                    <div class="iQoute">
+                        <p class="qoute">
+                            A purpose of human life, no matter who is controlling it, is to love whoever is around to be
+                            loved.
+                        </p>
+                        <br>
+                        <p><strong>-Kurt Vonnegut <em>Sirens of Titan</em></strong></p>
+                    </div>
+                </div>
+        </form>
+
+
+    </div>
+    <footer class="footerBG">
+        <h3><em>Thanks for listening!</em></h3>
+        <br>
+        <label for="email">Wanna Subscribe to the life of Kurt?</label>
+        <div class="emailTag">
+            <input type="email" name="email" id="urEmail" placeholder="Enter your email here!" class="userEmail">
+            <button class="emailBtn" type="button">Join The Kurt Krew</button>
         </div>
-    </form>
-
-<div class="bodyTwo">
-    <div class="transition">
-        <p class="ampersand">&</p>
-        <button type="button" class="btn-log" >Log!! </button>
+    </footer>
     </div>
-    <div class="entrySection">
-
-    </div>
-</div>
-<footer class="footerBG">
-    <h3><em>Thanks for listening!</em></h3>
-    <br>
-    <label for="email">Wanna Subscribe to the life of Kurt?</label>
-    <div class="emailTag">
-        <input type="email" name="email" id="urEmail" placeholder="Enter your email here!" class="userEmail">
-        <button class="emailBtn" type="button">Join The Kurt Krew</button>
-    </div>
-</footer>
-</div>
 </body>
 
-<!-- <script src="src/scripts/entrycomponent.js"></script> -->
-<script src="src/scripts/DOMentries.js"></script>
-<script src="src/scripts/data.js"></script>
-<script src="/src/scripts/main.js"></script>
+<script type="module" src="/src/scripts/main.js"></script>
 
 
 </html>

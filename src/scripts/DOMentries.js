@@ -1,3 +1,5 @@
+import newHtml from './entrycomponent.js';
+
 const DOMentries = {
     insertEntry: (arr) => {
         const entrySection = document.querySelector('.entrySection');
@@ -9,13 +11,24 @@ const DOMentries = {
         }
     ,
     storeEntry: () => {
+        const date = document.querySelector('#journalDate');
+        const topic = document.querySelector('.topic');
+        const textarea = document.querySelector('#journalText');
+        const mood = document.querySelector('#moodOptions');
+
         let newEntry = {
-            "date" : document.querySelector('#journalDate').value,
-            "topic": document.querySelector('.topic').value,
-            "textarea": document.querySelector('#journalText').value,
-            "mood": document.querySelector('#moodOptions').value,
+            "date" : date.value,
+            "topic": topic.value,
+            "textarea": textarea.value,
+            "mood": mood.value,
         }
+        date.value = "";
+        topic.value = "";
+        textarea.value = "";
+        mood.value = "";
+
         return newEntry;
     }
 }
 
+export default DOMentries;

@@ -139,7 +139,6 @@ div.qoutebox {
     padding: 2.5%;
     border-style: none;
     border-radius: 2.5%;
-    margin-top:5%;
 }
 div.iQoute p.qoute:first-letter {
     display: block;
@@ -154,6 +153,7 @@ div.iQoute p.qoute:first-letter {
     width: 100%;
     flex-direction: column;
     align-items: center;
+    margin-top: 3%;
 }
 div.transition {
     border: 1px solid black;
@@ -168,9 +168,6 @@ div.transition {
 p.ampersand{
     font-size: 50px;
     color: white;
-}
-.entrySection {
-    margin-top: 2%;
 }
 .newEntries {
     background-color: white;

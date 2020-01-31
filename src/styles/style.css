@@ -183,3 +183,11 @@ p.ampersand{
     border-radius: 2.5%;
     margin-bottom: 5%;
 }
+div.newEntry {
+    width: 100%;
+}
+div.mod-btns {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}

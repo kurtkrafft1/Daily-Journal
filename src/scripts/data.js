@@ -1,3 +1,5 @@
+const URL = "http://localhost:3000/entries";
+const idArr=[]
 const API = {
     getJournalEntries () {
         return fetch("http://localhost:3000/entries")
@@ -10,4 +12,24 @@ const API = {
                 //     insertEntry(item);
                 // });
     })
-}};
+},
+//Method to add new journal entry
+    postNewJournal(journalEntry) {
+        return fetch(URL, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(journalEntry),
+        }).then(resp => resp.json());
+    },
+//method to delete Journal Entry from the API
+    deleteEntry(id) {
+        return fetch(`${URL}/${id}`, {
+            method: "DELETE"
+        }).then(r=>r.json())
+    },
+    snagJournalEntries: () => {
+        return fetch(URL).then(r=>r.json());
+    }
+};

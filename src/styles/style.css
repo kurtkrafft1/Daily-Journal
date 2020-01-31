@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+div.bigBody {
+    background-image: url("/src/img/mountains.jpeg");
+    overflow: hidden;
+    background-attachment: fixed;
+    background-repeat: round;   
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    width: 100%;
+    margin-bottom:7%;
+    align-items: center;
+    border: 1px none black;
+    padding: 2%;
+    border-radius: 3%;
+    
+}
+.dataSet {
+    width: 75%;
+}
+header {
+    display: flex;
+    background-image: linear-gradient(to right, silver, rgb(16, 112, 171));
+    /* background-image: url("/src/img/droplets.jpeg"); */
+    justify-content: space-evenly;
+    position: sticky;
+    top:0;
+    width: 100%;
+    
+}
+div.formBtn {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+h1.title {
+    color: white;
+    text-shadow: 1px 1px black;
+    font-size: 300%;
+}
+ul.navbar {
+    align-self: flex-end;
+    justify-content: space-around;
+    display: flex;
+    width: 50%;
+}
+li.navLink{
+    list-style-type: none;
+    border: 1px white solid;
+    border-radius: 5px;
+    padding: 10px;
+    transition: ease 0.3s;
+}
+li.navLink:hover{
+    border: 1px solid lightblue;
+    /* padding: 15px; */
+    transition: ease 0.3s;
+    background-color: midnightblue;
+}
+
+a.nav-link {
+    border: 1px white solid;
+    border: 2px;
+}
+a.nav-link:link{
+    color: white;
+}
+a.nav-link:visited{
+    color: white;
+}
+
+div.formBG {
+    background-color: white;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.5%;
+    border-style: none;
+    border-radius: 2.5%;
+}
+.footerBG {
+    display: flex;
+    background-image: linear-gradient(to left, silver, rgb(16, 112, 171));
+    padding: 3%;
+    flex-direction: column;
+    justify-content: center;
+}
+footer.footerBG{
+    display: flex;
+    align-items: center;
+}
+footer.footerBG h3 {
+    color: white;
+}
+
+footer.footerBG label {
+    margin-bottom: 1%;
+    color: white;
+}
+.emailTag {
+    display: flex;
+    flex-direction: row;
+}
+button {
+    margin: 1%;
+    border: 1px rgb(16, 112, 171) solid;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(16, 112, 171);
+    transition: all .3s ease;
+    font-size: 1.4em;
+}
+button:hover {
+    color: rgb(16, 112, 171);
+    background-color: white;
+    margin: 3%;
+    transition: all .3 ease;
+}
+button.emailBtn {
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+div.qoutebox {
+    background-color: white;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.5%;
+    border-style: none;
+    border-radius: 2.5%;
+    margin-top:5%;
+}
+div.iQoute p.qoute:first-letter {
+    display: block;
+    float: left;
+    margin:3px;
+    color: red;
+    font-size: 130%;
+}
+
+.bodyTwo {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+div.transition {
+    border: 1px solid black;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+    background-color: rgba(43,43,43,0.8);
+    border-radius: 5%;
+}
+p.ampersand{
+    font-size: 50px;
+    color: white;
+}
+.entrySection {
+    margin-top: 2%;
+}
+.newEntries {
+    background-color: white;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.5%;
+    border-style: none;
+    border-radius: 2.5%;
+    margin-bottom: 5%;
+}
+div.newEntry {
+    width: 100%;
+}
+div.mod-btns {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}

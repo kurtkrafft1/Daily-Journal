@@ -14,13 +14,15 @@ const API = {
     },
     //Method to add new journal entry
     postNewJournal(journalEntry) {
-        return fetch(URL, {
+         fetch(URL, {
             method: "POST",
             headers: {
                 "content-type": "application/json"
             },
             body: JSON.stringify(journalEntry),
-        }).then(resp => resp.json());
+        }).then(resp => resp.json()).then(newData => {
+            return newData;
+        });
     },
     //method to delete Journal Entry from the API
     deleteEntry(id) {

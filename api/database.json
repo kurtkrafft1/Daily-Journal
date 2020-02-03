@@ -15,11 +15,11 @@
       "mood": "anxious"
     },
     {
-      "id": 3,
-      "date": "1/4/20",
+      "date": "2020-01-01",
       "topic": "HTML",
-      "textarea": "First day of class we learned setting up a basic HTML page, its awesome using the exclamation point to tab complete a skeleton.",
-      "mood": "Its dancin time"
+      "textarea": "Today I covered HTML it was so cool to see the stuff work",
+      "mood": "happy",
+      "id": 3
     }
   ]
 }

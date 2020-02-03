@@ -15,7 +15,7 @@ form {
     flex-direction: column;
     margin-top: 5%;
     width: 100%;
-    margin-bottom:7%;
+    margin-bottom:5%;
     align-items: center;
     border: 1px none black;
     padding: 2%;
@@ -116,14 +116,14 @@ button {
     padding: 5px;
     color: white;
     background-color: rgb(16, 112, 171);
-    transition: all .3s ease;
     font-size: 1.4em;
+    transition: 2s ease;
 }
 button:hover {
     color: rgb(16, 112, 171);
     background-color: white;
-    margin: 3%;
-    transition: all .3 ease;
+    transition: 0.3s ease;
+   
 }
 button.emailBtn {
     font-size: 10px;
@@ -139,6 +139,7 @@ div.qoutebox {
     padding: 2.5%;
     border-style: none;
     border-radius: 2.5%;
+    margin-top: 1%;
 }
 div.iQoute p.qoute:first-letter {
     display: block;
@@ -161,13 +162,9 @@ div.transition {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5%;
-    background-color: rgba(43,43,43,0.8);
-    border-radius: 5%;
-}
-p.ampersand{
-    font-size: 50px;
-    color: white;
+    margin-bottom: 2%;
+    background-color: rgba(43,43,43,0.6);
+    border-radius: 10px;
 }
 .newEntries {
     background-color: white;
@@ -187,4 +184,10 @@ div.mod-btns {
     display: flex;
     justify-content: flex-end;
     width: 100%;
+}
+.buttons {
+display: flex;
+justify-content: space-evenly;
+width: 100%;
+padding: 5%;
 }

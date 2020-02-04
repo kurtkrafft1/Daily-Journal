@@ -25,22 +25,31 @@ const mainDomEntry = {
                 <option value="Its dancin' time!!">It's Dancn' Time!!</option>
             </select>
         </fieldset>
-        <fieldset class="dataSet">
-            <label for="password">Password: </label>
-            <input type="password" name="password" id="pWord"
-                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
-                title="Please inclued at least 1 uppercase character, 1 lowercase character and 1 number. The password is 'KurtRules1'"
-                minlength="6" required>
-        </fieldset>
 
     </div>
     <div class="bodyTwo">
         <div class="transition">
             <div class="buttons">
             <button type="button" class="btn-log">Log!! </button>
-            <button type="button" class="btn-view">View my Entries</button>
         </div>
         </div>
+        <div id="radio-buttons">
+        <fieldset class="dataSet ">
+        <legend>Filter Entries by Mood</legend>
+        <input type="radio" name="anxious" value="anxious">
+        <label for"anxious">Anxious</label>
+        <input type="radio" name="sad" value="sad">
+        <label for"sad">Sad</label>
+        <input type="radio" name="excited" value="excited">
+        <label for"excited">Excited</label>
+        <input type="radio" name="happy" value="happy">
+        <label for"happy">Happy</label>
+        <input type="radio" name="frazzled" value="frazzled">
+        <label for"frazzled">Frazzled</label>
+        <input type="radio" name="dancin" value="Its dancin' time!!">
+        <label for"dancin">It's Dancin' Time!</label>
+      </fieldset>
+      </div>
         <div class="entrySection">
 
         </div>

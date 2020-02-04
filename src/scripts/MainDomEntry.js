@@ -30,7 +30,7 @@ const mainDomEntry = {
     <div class="bodyTwo">
         <div class="transition">
             <div class="buttons">
-            <button type="button" class="btn-log">Log!! </button>
+            <button type="button" id="log-btn" class="btn-log">Log!! </button>
         </div>
         </div>
         <div id="radio-buttons">
@@ -49,6 +49,9 @@ const mainDomEntry = {
         <input type="radio" name="dancin" value="Its dancin' time!!">
         <label for"dancin">It's Dancin' Time!</label>
       </fieldset>
+      </div>
+      <div id="view-Btn">
+        <button type="button" id="view-btn">View Logs</button>
       </div>
         <div class="entrySection">
 

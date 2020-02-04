@@ -7,13 +7,14 @@ const DOMentries = {
         const entrySection = document.querySelector('.entrySection');
         entrySection.innerHTML = "";
         arr.forEach(entry => {
-            if (entry.date ===undefined){
+            if (entry.date === undefined) {
                 API.deleteEntry(entry.id);
-            }else {
-            let itemEntry = newHtml.generateHTML(entry);
-            entrySection.innerHTML += itemEntry;
-        }})
-        }
+            } else {
+                let itemEntry = newHtml.generateHTML(entry);
+                entrySection.innerHTML += itemEntry;
+            }
+        })
+    }
     ,
     storeEntry: () => {
         const date = document.querySelector('#journalDate');
@@ -22,16 +23,36 @@ const DOMentries = {
         const mood = document.querySelector('#moodOptions');
 
         let newEntry = {
-            "date" : date.value,
+            "date": date.value,
             "topic": `${topic.value} `,
             "textarea": textarea.value,
             "mood": mood.value,
         }
         date.value = "";
-       topic.value = "";
-       textarea.value = "";
-       mood.value = "";
-      return formValidation.testFormValidity(newEntry);
+        topic.value = "";
+        textarea.value = "";
+        mood.value = "";
+        return formValidation.testFormValidity(newEntry);
+    },
+    editFormUpdateDom: (div, journal) => {
+
+        div.innerHTML = newHtml.generateFormHtml(journal);
+        return journal;
+    }, storeUpdatedEntry: (id) => {
+        const date = document.querySelector(`#journalDate-${id}`);
+        const topic = document.querySelector(`.topic-${id}`);
+        const textarea = document.querySelector(`#journalText-${id}`);
+        const mood = document.querySelector(`#moodOptions-${id}`);
+       
+        let newEntry = {
+            "date": date.value,
+            "topic": `${topic.value} `,
+            "textarea": textarea.value,
+            "mood": mood.value,
+        }
+
+        API.updateOneEntry(id, newEntry);
+
     }
 }
 

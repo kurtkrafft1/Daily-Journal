@@ -1,5 +1,6 @@
 import API from './data.js';
 import DOMentries from './DOMentries.js';
+import editButtonManager from './editButtonManager.js';
 
 const EventListenerManager = {
     addLogButtonListener() {
@@ -13,6 +14,13 @@ const EventListenerManager = {
             )
         });
     },
+    addViewButtonListener() {
+        const viewButton = document.querySelector('#view-btn');
+        viewButton.addEventListener('click', () => {
+           API.snagJournalEntries().then(arr=> {
+            const newArr = arr.reverse()   
+            DOMentries.insertEntry(newArr)})     
+    })},
 
     AddBodyTwoListener() {
         const entrySection = document.querySelector('.entrySection');
@@ -23,9 +31,12 @@ const EventListenerManager = {
             if (btnID[0] === "btn") {
                 API.deleteEntry(apiId)
                     .then(API.snagJournalEntries)
-                    .then(DOMentries.insertEntry)
+                    .then(arr=> {
+                        const newArr = arr.reverse()
+                        DOMentries.insertEntry(newArr)})
             }else if (btnID[0]==="edit"){
-                console.log("edit button")
+                // console.log("edit button") 
+                editButtonManager.startingEditButton(btnID[2]);
             }
         })
     },
@@ -40,6 +51,10 @@ const EventListenerManager = {
                 // arr.filter(obj=> obj.mood===mood).then(()=> DOMentries.insertEntry(arr));
             }) }
         } )
+    }, 
+    addUpdateEventListener(id, obj) {
+        const updateButton = document.getElementById(`update-btn-${id}`);
+        updateButton.addEventListener('click',() => {DOMentries.storeUpdatedEntry(id, obj)})
     }
    
 }

@@ -9,6 +9,7 @@ render2Dom.renderMain(mainDomEntry.createFirstDom());
 
 EventListenerManager.AddBodyTwoListener();
 EventListenerManager.addLogButtonListener();
+EventListenerManager.addViewButtonListener();
 EventListenerManager.addEventListenertoRadio();
 
 

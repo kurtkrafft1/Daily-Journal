@@ -1,25 +1,25 @@
 {
   "entries": [
     {
-      "id": 1,
-      "date": "1/2/20",
-      "topic": "Javascript",
-      "textarea": "Today we covered a wide array (pun intended) of basic javascript functionality. We learned arrays, objects and functions. Nothing to crazy, but the basic buiding blocks for sucess",
-      "mood": "frazzled"
-    },
-    {
-      "id": 2,
-      "date": "1/3/20",
-      "topic": "CSS",
-      "textarea": "Today I learned styling! it was fanstastic and a lot of fun. flexbox changes the game and makes positioning easy!",
-      "mood": "anxious"
-    },
-    {
-      "date": "2020-01-01",
-      "topic": "HTML",
-      "textarea": "Today I covered HTML it was so cool to see the stuff work",
-      "mood": "happy",
+      "date": "2020-02-20",
+      "topic": "HTML  ",
+      "textarea": "Today I leanred HTML it was so fun and easy!  it was an easier time of life.",
+      "mood": "Its dancin' time!!",
       "id": 3
+    },
+    {
+      "date": "2020-02-04",
+      "topic": "CRUD 1 ",
+      "textarea": "Today I learned a ton about updating a database. It was tough and it was definitely some next level shit! I am very proud of my self for doing it all. ",
+      "mood": "excited",
+      "id": 4
+    },
+    {
+      "date": "2020-02-05",
+      "topic": "I leanred  ",
+      "textarea": "SOMETHING",
+      "mood": "excited",
+      "id": 5
     }
   ]
 }

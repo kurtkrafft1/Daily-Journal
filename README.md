@@ -6,6 +6,7 @@ don't worry, they aren't too tough.
 This is a database focused project, mostly to show the students (me included) how to use CRUD effectively. At this point (2/5/20) we have gotten up to deleting posts, but not editing. Me, being a go-getter, already started editing functionality. Enjoy
 
 STEP ONE 
+
 install JSON, if you already have JSON installed on your computer skip this step 
 1. open your terminal and enter this code `npm install -g json-server`
 

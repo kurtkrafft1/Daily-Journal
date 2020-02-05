@@ -160,7 +160,8 @@ div.iQoute p.qoute:first-letter {
 }
 div.transition {
     /* border: 1px solid black; */
-    width: 20%;
+    background: white;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,7 +196,7 @@ padding: 5%;
 }
 #radio-buttons {
     background: white ;
-    width:50%;
+    width:95%;
     padding:1%;
     display: flex;
     justify-content: center;
@@ -203,7 +204,9 @@ padding: 5%;
     margin-bottom: 3%;
 }
 #log-btn {
-    padding: 10%;
+    width: 25%;
+    /* height: 100%; */
+    padding: 2%;
 }
 #view-btn{
     margin-bottom: 25%;

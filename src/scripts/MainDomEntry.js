@@ -31,8 +31,8 @@ const mainDomEntry = {
         <div class="transition">
             <div class="buttons">
             <button type="button" id="log-btn" class="btn-log">Log!! </button>
-        </div>
-        </div>
+            </div>
+        
         <div id="radio-buttons">
         <fieldset class="dataSet ">
         <legend>Filter Entries by Mood</legend>
@@ -53,9 +53,11 @@ const mainDomEntry = {
       <div id="view-Btn">
         <button type="button" id="view-btn">View Logs</button>
       </div>
+      </div>
         <div class="entrySection">
 
         </div>
+
         <div class="qoutebox">
             <div class="iQoute">
                 <p class="qoute">

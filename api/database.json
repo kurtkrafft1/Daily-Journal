@@ -16,10 +16,38 @@
     },
     {
       "date": "2020-02-05",
-      "topic": "I leanred  ",
-      "textarea": "SOMETHING",
+      "topic": "I leanred    ",
+      "textarea": "SOMETHING  that was cool! and something that was Uncool",
       "mood": "excited",
       "id": 5
+    },
+    {
+      "date": "2020-02-05",
+      "topic": "bored   ",
+      "textarea": "Here I am again. I have completed all my projects. YE HAW!  ",
+      "mood": "frazzled",
+      "id": 6
+    },
+    {
+      "date": "2020-02-05",
+      "topic": "bored ",
+      "textarea": "Here I am once again logging bevause I have completed all my work. whats next?",
+      "mood": "sad",
+      "id": 7
+    },
+    {
+      "date": "2020-02-07",
+      "topic": "bored ",
+      "textarea": "Here I am again, staring at my screen because I have completed my work",
+      "mood": "anxious",
+      "id": 8
+    },
+    {
+      "date": "2020-02-10",
+      "topic": "bored ",
+      "textarea": "Here I am again because I have done all my work :D",
+      "mood": "Its dancin' time!!",
+      "id": 9
     }
   ]
 }

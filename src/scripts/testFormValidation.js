@@ -21,7 +21,7 @@ const noCursing = {
 const formValidation = {
     testFormValidity: (obj) => {
         const arr = obj.topic.split("");
-        if (arr.length > 10){
+        if (arr.length > 15){
             alert('Im sorry the Concepts Covered title is too long. 10 characters max')
             return false
         } 

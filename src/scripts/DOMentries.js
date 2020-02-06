@@ -21,6 +21,7 @@ const DOMentries = {
         const topic = document.querySelector('.topic');
         const textarea = document.querySelector('#journalText');
         const mood = document.querySelector('#moodOptions');
+        
 
         let newEntry = {
             "date": date.value,
@@ -34,9 +35,21 @@ const DOMentries = {
         mood.value = "";
         return formValidation.testFormValidity(newEntry);
     },
-    editFormUpdateDom: (div, journal) => {
+    editFormUpdateDom: (journal) => {
+        const date = document.querySelector('#journalDate');
+        const topic = document.querySelector('.topic');
+        const textarea = document.querySelector('#journalText');
+        // const mood = document.querySelector('#moodOptions');
+        const hiddenID = document.getElementById('hiddenId')
 
-        div.innerHTML = newHtml.generateFormHtml(journal);
+        date.value = journal.date;
+        topic.value = journal.topic;
+        textarea.value = journal.textarea;
+        hiddenID.value=journal.id;
+        // mood.value = journal.mood;
+        
+        
+        
         return journal;
     }, storeUpdatedEntry: (id) => {
         const date = document.querySelector(`#journalDate-${id}`);
@@ -53,6 +66,20 @@ const DOMentries = {
 
         API.updateOneEntry(id, newEntry);
 
+    },
+    clearForm: () => {
+        const date = document.querySelector('#journalDate');
+        const topic = document.querySelector('.topic');
+        const textarea = document.querySelector('#journalText');
+        const mood = document.querySelector('#moodOptions');
+        const hiddenID = document.getElementById('hiddenId')
+        date.value = "";
+        topic.value = "";
+        textarea.value = "";
+        mood.value = "";
+        hiddenID.value = "";
+
+      
     }
 }
 

@@ -4,9 +4,8 @@ import EventListenerManager from './EventListenerManager.js';
 
 const editButtonManager = {
     startingEditButton: (id) => {
-        const divElement = document.querySelector(`.entry-${id}`)
-        API.getOneEntry(id).then(obj=> DOMentries.editFormUpdateDom(divElement, obj))
-            .then(obj => EventListenerManager.addUpdateEventListener(id, obj))
+        API.getOneEntry(id).then(obj=> DOMentries.editFormUpdateDom(obj))
+            .then(obj => EventListenerManager.addLogButtonListener())
     }
 }
 export default editButtonManager;

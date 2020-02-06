@@ -2,6 +2,7 @@ const mainDomEntry = {
     createFirstDom: () => {
         return `<div class="formBG">
         <fieldset class="dataSet">
+        <input type="hidden" id='hiddenId' value="">
             <label for="journalDate">Date of Entry: </label>
             <input type="date" name="journalDate" id="journalDate" required>
         </fieldset>

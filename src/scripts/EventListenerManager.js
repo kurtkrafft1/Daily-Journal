@@ -4,14 +4,32 @@ import editButtonManager from './editButtonManager.js';
 
 const EventListenerManager = {
     addLogButtonListener() {
-        const logButton = document.querySelector('.btn-log');
+        const hiddenInput = document.getElementById('hiddenId');
+        const logButton = document.querySelector('.btn-log')
+       
         logButton.addEventListener('click', () => {
+            if (hiddenInput.value!== ""){
+                const date = document.querySelector('#journalDate');
+                const topic = document.querySelector('.topic');
+                const textarea = document.querySelector('#journalText');
+                const mood = document.querySelector('#moodOptions');
+                
+        
+                let newEntry = {
+                    "date": date.value,
+                    "topic": `${topic.value} `,
+                    "textarea": textarea.value,
+                    "mood": mood.value,
+                }
+                
+                API.updateOneEntry(hiddenInput.value, newEntry).then(DOMentries.clearForm);
+            } else {
             API.postNewJournal(DOMentries.storeEntry())
             .then(() =>
                 API.snagJournalEntries().then(((arr) =>{
                     const newArr = arr.reverse()
                      DOMentries.insertEntry(newArr)}))
-            )
+            )}
         });
     },
     addViewButtonListener() {
@@ -35,7 +53,6 @@ const EventListenerManager = {
                         const newArr = arr.reverse()
                         DOMentries.insertEntry(newArr)})
             }else if (btnID[0]==="edit"){
-                // console.log("edit button") 
                 editButtonManager.startingEditButton(btnID[2]);
             }
         })
@@ -45,17 +62,12 @@ const EventListenerManager = {
         radioButtons.addEventListener("click", (event) => {
             if(event.target.type==="radio"){
             const mood = event.target.value;
-            // API.filterForMood(mood);
             API.snagJournalEntries().then(arr => {
                 DOMentries.insertEntry(arr.filter(obj=> obj.mood===mood))
-                // arr.filter(obj=> obj.mood===mood).then(()=> DOMentries.insertEntry(arr));
             }) }
         } )
     }, 
-    addUpdateEventListener(id, obj) {
-        const updateButton = document.getElementById(`update-btn-${id}`);
-        updateButton.addEventListener('click',() => {DOMentries.storeUpdatedEntry(id, obj)})
-    }
+
    
 }
 

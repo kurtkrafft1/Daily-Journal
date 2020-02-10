@@ -39,14 +39,14 @@ const DOMentries = {
         const date = document.querySelector('#journalDate');
         const topic = document.querySelector('.topic');
         const textarea = document.querySelector('#journalText');
-        // const mood = document.querySelector('#moodOptions');
+        const mood = document.querySelector('#moodOptions');
         const hiddenID = document.getElementById('hiddenId')
 
         date.value = journal.date;
         topic.value = journal.topic;
         textarea.value = journal.textarea;
         hiddenID.value=journal.id;
-        // mood.value = journal.mood;
+        mood.value = journal.mood;
         
         
         

@@ -2,18 +2,6 @@ import DOMentries from "./DOMentries.js";
 
 const URL = "http://localhost:3000";
 const API = {
-    // getJournalEntries() {
-    //     return fetch("http://localhost:3000/entries")
-    //         .then(response => response.json())
-    //         .then(entriesData => {
-    //             return entriesData;
-    //             // console.log(entriesData);
-    //             // entriesData.forEach(item => {
-    //             //     // console.log(item)
-    //             //     insertEntry(item);
-    //             // });
-    //         })
-    // },
     //Method to add new journal entry
     postNewJournal(journalEntry) {
          return fetch(`${URL}/entries`, {
@@ -23,9 +11,6 @@ const API = {
             },
             body: JSON.stringify(journalEntry),
         })
-        // .then(resp => resp.json()).then(newData => {
-        //     return newData;
-        // });
     },
     //method to delete Journal Entry from the API
     deleteEntry(id) {
@@ -53,16 +38,7 @@ const API = {
             DOMentries.insertEntry(newArr)})
             
     }
-    // ,
-    // filterForMood: (mood) => {
-    //     fetch(URL)
-    //         .then(r=>r.json())
-    //         .then(data=> {
-    //            const arr = data.filter(obj=> obj.mood === mood);
-    //         //    console.log(arr);
-    //            DOMentries.insertEntry(arr);
-    //         })
-    // }
+   
 };
 
 export default API;

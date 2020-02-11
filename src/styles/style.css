@@ -211,3 +211,17 @@ padding: 5%;
 #view-btn{
     margin-bottom: 25%;
 }
+.searches {
+    display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   height: 80%;
+    
+}
+.search {
+    height: 76%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

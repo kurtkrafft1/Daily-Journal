@@ -18,12 +18,7 @@ const mainDomEntry = {
             <label for="moodOptions">Mood for the day </label>
             <select name="moodOptions" id="moodOptions" required>
                 <option value="pleaseSelect" disabled selected value>--Please select an option--</option>
-                <option value="happy">Happy</option>
-                <option value="sad">Sad</option>
-                <option value="excited">excited</option>
-                <option value="frazzled">Frazzled</option>
-                <option value="anxious">Anxious</option>
-                <option value="Its dancin' time!!">It's Dancn' Time!!</option>
+                
             </select>
         </fieldset>
 
@@ -33,27 +28,20 @@ const mainDomEntry = {
             <div class="buttons">
             <button type="button" id="log-btn" class="btn-log">Log!! </button>
             </div>
-        
-        <div id="radio-buttons">
-        <fieldset class="dataSet ">
-        <legend>Filter Entries by Mood</legend>
-        <input type="radio" name="anxious" value="anxious">
-        <label for"anxious">Anxious</label>
-        <input type="radio" name="sad" value="sad">
-        <label for"sad">Sad</label>
-        <input type="radio" name="excited" value="excited">
-        <label for"excited">Excited</label>
-        <input type="radio" name="happy" value="happy">
-        <label for"happy">Happy</label>
-        <input type="radio" name="frazzled" value="frazzled">
-        <label for"frazzled">Frazzled</label>
-        <input type="radio" name="dancin" value="Its dancin' time!!">
-        <label for"dancin">It's Dancin' Time!</label>
+        <div class="searches">
+        <fieldset id="radioButtons">
+            <legend>Filter by Mood</legend>
+        </fieldset>
+      <fieldset class="search">
+        <legend>Search Entries</legend>
+        <input type="text" placeholder="search entries here" id="search">
       </fieldset>
       </div>
       <div id="view-Btn">
-        <button type="button" id="view-btn">View Logs</button>
+      <button type="button" id="view-btn">View Logs</button>
+    </div>
       </div>
+    
       </div>
         <div class="entrySection">
 

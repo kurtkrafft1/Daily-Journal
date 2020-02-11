@@ -1,6 +1,7 @@
 import API from './data.js';
 import DOMentries from './DOMentries.js';
 import editButtonManager from './editButtonManager.js';
+import searchBarManager from './searchBarManager.js';
 
 const EventListenerManager = {
     addLogButtonListener() {
@@ -19,7 +20,7 @@ const EventListenerManager = {
                     "date": date.value,
                     "topic": `${topic.value} `,
                     "textarea": textarea.value,
-                    "mood": mood.value,
+                    "moodId": Number(mood.value),
                 }
                 
                 API.updateOneEntry(hiddenInput.value, newEntry).then(DOMentries.clearForm);
@@ -58,15 +59,27 @@ const EventListenerManager = {
         })
     },
     addEventListenertoRadio () {
-        const radioButtons = document.getElementById('radio-buttons');
+        const radioButtons = document.getElementById('radioButtons');
         radioButtons.addEventListener("click", (event) => {
             if(event.target.type==="radio"){
             const mood = event.target.value;
             API.snagJournalEntries().then(arr => {
-                DOMentries.insertEntry(arr.filter(obj=> obj.mood===mood))
+                DOMentries.insertEntry(arr.filter(obj=> obj.mood.mood===mood))
             }) }
         } )
     }, 
+        addSearchListener() {
+          const searchBar = document.getElementById('search');
+          searchBar.addEventListener('keypress', (event) => {
+            if(event.charCode === 13){
+                const str = searchBar.value
+                const arr = searchBarManager.searchValue(str);
+                // console.log(arr);
+                
+            }
+          })
+        }
+    
 
    
 }

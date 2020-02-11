@@ -19,7 +19,7 @@ const API = {
         }).then(r => r.json())
     },
     snagJournalEntries: () => {
-        return fetch(`${URL}/entries`).then(r => r.json());
+        return fetch(`${URL}/entries?_expand=mood`).then(r => r.json());
     },
     getOneEntry: (id) => {
         return fetch(`${URL}/entries/${id}`)
@@ -37,6 +37,11 @@ const API = {
             {const newArr = arr.reverse()
             DOMentries.insertEntry(newArr)})
             
+    },
+    getMoods:() => {
+      return fetch(`${URL}/moods`)
+      .then(r=>r.json())
+
     }
    
 };

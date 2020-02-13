@@ -5,7 +5,9 @@ const newHtml = {
     <h3>${journal.topic}</h3>
     <h5 class="entryItem">Date: ${journal.date}</h5>
     <h5 class="entryItem">Mood: ${journal.mood.mood}</h5>
-    <h5 class="entryItem">Entry: ${journal.textarea}</h5></div>
+    <h5 class="entryItem">Entry: ${journal.textarea}</h5>
+    <h5 class="entryItem">Teacher: ${journal.teacher.teach}</h5></div>
+    
     <div class="mod-btns"><button type="button" class="btn-${journal.id}">Delete</button><button type="button" class="edit-btn-${journal.id}">Edit</button></div></div>`
     return html;
 },
@@ -187,8 +189,9 @@ generateFormHtml: (journal) => {
 },
 generateMoodFilterHtml(mood) {
     return `
+    <div>
     <input type='radio' name='radio' id='filter-${mood}' value=${mood}>
-    <label for='radio'>${mood}</label>
+    <label for='radio'>${mood}</label></div>
     `
 }
 }

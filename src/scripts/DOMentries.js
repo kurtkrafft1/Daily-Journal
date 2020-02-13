@@ -11,6 +11,7 @@ const DOMentries = {
         API.deleteEntry(entry.id);
       } else {
         let itemEntry = newHtml.generateHTML(entry);
+        
         entrySection.innerHTML += itemEntry;
       }
     });
@@ -20,26 +21,33 @@ const DOMentries = {
     const topic = document.querySelector(".topic");
     const textarea = document.querySelector("#journalText");
     const mood = document.querySelector("#moodOptions");
+    const teach = document.querySelector('#teachOptions');
 
     let newEntry = {
       date: date.value,
       topic: `${topic.value} `,
       textarea: textarea.value,
-      moodId: Number(mood.value)
+      moodId: Number(mood.value),
+      moodId: Number(mood.value),
+      teacherId: Number(teach.value)
     };
     date.value = "";
     topic.value = "";
     textarea.value = "";
     mood.value = "";
+    teach.value="";
     return formValidation.testFormValidity(newEntry);
   },
   editFormUpdateDom: journal => {
+
     const date = document.querySelector("#journalDate");
     const topic = document.querySelector(".topic");
     const textarea = document.querySelector("#journalText");
     const mood = document.querySelector("#moodOptions");
     const hiddenID = document.getElementById("hiddenId");
+    const teach = document.querySelector('#teachOptions');
 
+    teach.value=journal.teacherId;
     date.value = journal.date;
     topic.value = journal.topic;
     textarea.value = journal.textarea;
@@ -53,12 +61,14 @@ const DOMentries = {
     const topic = document.querySelector(`.topic-${id}`);
     const textarea = document.querySelector(`#journalText-${id}`);
     const mood = document.querySelector(`#moodOptions-${id}`);
+    const teach = document.querySelector('#teachOptions');
 
     let newEntry = {
       date: date.value,
       topic: `${topic.value} `,
       textarea: textarea.value,
-      moodId: Number(mood.value)
+      moodId: Number(mood.value),
+      teacherId: Number(teach.value)
     };
 
     API.updateOneEntry(id, newEntry);
@@ -78,11 +88,13 @@ const DOMentries = {
     const textarea = document.querySelector("#journalText");
     const mood = document.querySelector("#moodOptions");
     const hiddenID = document.getElementById("hiddenId");
+    const teach = document.querySelector('#teachOptions');
     date.value = "";
     topic.value = "";
     textarea.value = "";
     mood.value = "";
     hiddenID.value = "";
+    teach.value="";
   },
   addMoodFilter() {
     // take array of entry objects and iterate through each

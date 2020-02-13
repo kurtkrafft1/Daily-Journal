@@ -194,18 +194,10 @@ justify-content: space-evenly;
 width: 100%;
 padding: 5%;
 }
-#radio-buttons {
-    background: white ;
-    width:95%;
-    padding:1%;
-    display: flex;
-    justify-content: center;
-    border-radius: 5px;
-    margin-bottom: 3%;
-}
+
 #log-btn {
     width: 25%;
-    /* height: 100%; */
+
     padding: 2%;
 }
 #view-btn{
@@ -216,12 +208,24 @@ padding: 5%;
    flex-direction: row;
    justify-content: space-evenly;
    height: 80%;
+   width: 100%;
+  
     
 }
 .search {
-    height: 76%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end ;
+    
     
 }
+.light-txt{
+    color: grey;
+    font-size: 10px;
+    list-style: none;
+    display: flex;
+    flex-direction:column ;
+    align-items: flex-start;
+    
+}
+

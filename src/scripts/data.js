@@ -19,7 +19,7 @@ const API = {
         }).then(r => r.json())
     },
     snagJournalEntries: () => {
-        return fetch(`${URL}/entries?_expand=mood`).then(r => r.json());
+        return fetch(`${URL}/entries?_expand=mood&_expand=teacher`).then(r => r.json());
     },
     getOneEntry: (id) => {
         return fetch(`${URL}/entries/${id}`)

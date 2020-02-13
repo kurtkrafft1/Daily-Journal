@@ -21,6 +21,16 @@ const mainDomEntry = {
                 
             </select>
         </fieldset>
+        <fieldset class="dataSet">
+            <label for="teachOptions">Please Select A Teacher</label>
+            <select name="teachOptions" id="teachOptions" required>
+                <option value="pleaseSelect" disabled selected value>--Please select an option--</option>
+                <option value="1">Andy</option>
+                <option value="2">Kristen</option>
+                <option value="3">Byran</option>
+                
+            </select>
+        </fieldset>
 
     </div>
     <div class="bodyTwo">
@@ -35,6 +45,16 @@ const mainDomEntry = {
       <fieldset class="search">
         <legend>Search Entries</legend>
         <input type="text" placeholder="search entries here" id="search">
+       
+        <p class="light-txt"><strong>Search Terms Like...</strong></p>
+        <p class="light-txt">'Javascript'</p>
+        <p class="light-txt">or</p>
+        
+        <p class="light-txt">'Html'</p>
+        <p class="light-txt">or</p>
+        <p class="light-txt">'The'</p>
+        
+       
       </fieldset>
       </div>
       <div id="view-Btn">

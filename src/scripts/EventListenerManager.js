@@ -14,6 +14,7 @@ const EventListenerManager = {
                 const topic = document.querySelector('.topic');
                 const textarea = document.querySelector('#journalText');
                 const mood = document.querySelector('#moodOptions');
+                const teach = document.querySelector('#teachOptions');
                 
         
                 let newEntry = {
@@ -21,6 +22,7 @@ const EventListenerManager = {
                     "topic": `${topic.value} `,
                     "textarea": textarea.value,
                     "moodId": Number(mood.value),
+                    "teacherId": Number(teach.value)
                 }
                 
                 API.updateOneEntry(hiddenInput.value, newEntry).then(DOMentries.clearForm);
@@ -72,8 +74,8 @@ const EventListenerManager = {
           const searchBar = document.getElementById('search');
           searchBar.addEventListener('keypress', (event) => {
             if(event.charCode === 13){
-                const str = searchBar.value
-                const arr = searchBarManager.searchValue(str);
+                const str = searchBar.value.toLowerCase();
+                searchBarManager.searchValue(str);
                 // console.log(arr);
                 
             }

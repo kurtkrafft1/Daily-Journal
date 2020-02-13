@@ -22,7 +22,8 @@ STEP THREE
 4. DO NOT CLOSE THIS TERMINAL
 
 STEP FOUR
-1. in the root directory (daily-journal) in your terminal enter this command in `hs -o` 
+1. in the root directory (daily-journal) in your terminal enter this command in `hs` 
+2. IMPORTANT!!!! whatever port you are using, you must go to `localhost:{your port number here}` in order for it to work `hs -o` wont work.
 2. enjoy my and now your journal!
 
 
